@@ -22,6 +22,10 @@ interface Props {
    * Muestra el texto por elección por paleta
    */
   fontColor?: string;
+  /**
+   * Muestra el color de fondo
+   */
+  backgroundColor?: string;
 }
 
 export const MyLabel = ({
@@ -30,12 +34,14 @@ export const MyLabel = ({
   allCaps = false,
   color = "text-primary",
   fontColor,
+  backgroundColor = "transparent",
 }: Props) => {
   return (
     <span
       className={`${size} ${color}`}
       style={{
         color: fontColor,
+        backgroundColor,
       }}
     >
       {" "}
